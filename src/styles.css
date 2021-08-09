@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --backgroundColor: lightyellow;
+  --headerBackgroundColor: #364150;
+  --headerColor:white;
+  --brandColor:white;
+  --menuLinkColor: white;
+}
+
+body {
+font-family: Roboto, sans-serif;
+/* background-color: lightyellow; */
+background-color: var(--backgroundColor);
+margin: 0px;
+}
+
+header {
+/* background-color: #364150; */
+background-color: var(--headerBackgroundColor);
+color: var(--headerColor);
+padding: 10px;
+}
+
+.navbar {
+}
+
+a.brand {
+color: var(--brandColor);
+text-decoration: none;
+padding-right: 30px;
+margin: 10px;
+font-weight: 700;
+}
+
+.nav-item {
+color: var(--menuLinkColor);
+text-decoration: none;
+padding: 5px;
+}
+
+main {
+margin: 10px;
+}
