@@ -12,6 +12,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { TaskReportListComponent } from './task-report-list/task-report-list.component';
 import { FormsModule } from '@angular/forms';
+import { ViewTaskComponent } from './view-task/view-task.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     AddTaskComponent,
     ListUsersComponent,
     TaskReportListComponent,
+    ViewTaskComponent,
   ],
   imports: [
     BrowserModule,

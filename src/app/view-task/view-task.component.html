@@ -1,4 +1,4 @@
-<h3>List Tasks</h3>
+<h3>Task Details</h3>
 <section></section>
 <section>
   <table border="1">
@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody id="tasks-table">
-      <tr *ngFor="let task of tasks">
+      <tr>
 <td>{{task.id}}</td>
 <td>{{task.name}}</td>
 <td>{{task.priority}}</td>
@@ -23,21 +23,15 @@
 <td>{{task.createdBy}}</td>
 <td>{{task.status}}</td>
 <td>{{task.estimation}} Hrs</td>
-<td><a routerLink="/viewtask/{{task.id}}">View</a></td>
+<td>
+  <a routerLink="/viewtask">Edit</a> &nbsp;
+  <a routerLink="/viewtask" (click)="deleteTask()">Delete</a>
+</td>
 
       </tr>
-      <tr>
-        <td colspan="6">
-          Total Estimation Hours
-        </td>
-        <td>
-          {{getTotalEstimationHours()}} Hrs
-        </td>
-      </tr>
+
 
     </tbody>
   </table>
-  <a href="addtask.html" data-toggle="modal" data-target="#modelId"
-    >Add Task</a
-  >
+
 </section>
