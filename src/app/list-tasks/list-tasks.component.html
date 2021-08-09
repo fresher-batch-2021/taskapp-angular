@@ -10,6 +10,7 @@
         <th>Created Date</th>
         <th>Created By</th>
         <th>Status</th>
+        <th>Estimation(Hrs)</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -21,6 +22,17 @@
 <td>{{task.createdDate}}</td>
 <td>{{task.createdBy}}</td>
 <td>{{task.status}}</td>
+<td>{{task.estimation}} Hrs</td>
+<td><a routerLink="viewtask/{{task.id}}">View</a></td>
+
+      </tr>
+      <tr>
+        <td colspan="6">
+          Total Estimation Hours
+        </td>
+        <td>
+          {{getTotalEstimationHours()}} Hrs
+        </td>
       </tr>
 
     </tbody>

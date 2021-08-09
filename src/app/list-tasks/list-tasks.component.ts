@@ -10,6 +10,8 @@ export class ListTasksComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+
   }
 
   tasks = [
@@ -20,6 +22,8 @@ export class ListTasksComponent implements OnInit {
       createdDate: "2021-07-01 09:00",
       createdBy: "Naresh",
       status: "COMPLETED",
+      estimation:2
+
     },
     {
       id: 2,
@@ -28,6 +32,7 @@ export class ListTasksComponent implements OnInit {
       createdDate: "2021-07-01 09:00",
       createdBy: "Naresh",
       status: "COMPLETED",
+      estimation:3
     },
     {
       id: 3,
@@ -36,8 +41,19 @@ export class ListTasksComponent implements OnInit {
       createdDate: "2021-07-01 09:00",
       createdBy: "Naresh",
       status: "COMPLETED",
+      estimation:1
     },
   ];
+
+  totalHours:number = 0;
+  getTotalEstimationHours(){
+    this.totalHours = 0;
+    for(let task of this.tasks){
+      this.totalHours = this.totalHours + task.estimation;
+    }
+    return this.totalHours;
+
+  }
 
 
 }
